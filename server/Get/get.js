@@ -10,7 +10,6 @@ const getAllPhones = async(req,res) =>{
         res.status(500).json({
             status: 'Failed',
             message : err
-    
     })
   }
 }

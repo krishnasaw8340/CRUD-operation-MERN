@@ -1,0 +1,51 @@
+/* GetAll.css */
+
+.phonebook-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+  }
+  .action-icons{
+    /* position: absolute; */
+    top: 10px;
+    right: 10px;
+    display: flex;
+    gap: 40px;
+    cursor: pointer;
+  }
+  /* Styling for the resized icons */
+.icon {
+    width: 20px; /* Adjust the size as needed */
+    height: 20px; /* Adjust the size as needed */
+  }
+  
+  @media (max-width: 768px) {
+    .phonebook-container {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .phonebook-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  .phone-entry {
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+  }
+  
+  .phone-entry h2 {
+    color: #333;
+    margin-bottom: 5px;
+  }
+  
+  .phone-entry p {
+    color: #666;
+  }
+  

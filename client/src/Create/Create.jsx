@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 function Create() {
-  const [name, setName] = useState("");
+  const [name, setName] = useState('');
   const [phone, setPhone] = useState(0);
   const addNewDada = async () => {
     try {
@@ -17,9 +17,10 @@ function Create() {
       }
     } catch (err) {
       alert("An error occurred while adding data. Please try again.");
-      console.error("Error:", error);
+      console.error("Error:", err);
     }
-    axios.post("http://localhost:4000/addphone", { name, phone });
+    setName('');
+    setPhone(0);
   };
 
   return (
@@ -27,6 +28,7 @@ function Create() {
       <label htmlFor="">Name:</label>
       <input
         type="text"
+        value={name}
         onChange={(e) => {
           setName(e.target.value);
         }}
@@ -35,6 +37,7 @@ function Create() {
       <label htmlFor=""> Phone:</label>
       <input
         type="number"
+        value={phone}
         onChange={(e) => {
           setPhone(e.target.value);
         }}
